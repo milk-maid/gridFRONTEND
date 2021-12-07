@@ -1,45 +1,92 @@
-.sleep {grid-area: sleep;}
-.alone {grid-area: alone;}
-.stand {grid-area: stand;}
-.single {grid-area: single}
-.sit {grid-area: sit}
-
-.container {
-    display: grid;
-    margin: 40px;
-    gap: 25px 25px;
-    grid-template-areas: 'sleep sleep alone stand'
-                          'single sit sit stand';
+body {
+    background-color: aliceblue;
+}
+.sleep,
+.alone,
+.sit {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: honeydew;
 }
 
-.item {
-    border-radius: 2%;
-    padding: 25px;
-}
-
-img {
-    border-radius: 50%;
-}
-
-.prefix {
-    display: flex;
-    width: 190px;
-    justify-content: space-between;
+.single,
+.stand {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: hsl(219, 29%, 14%);
+    /* font-weight: 600; */
 }
 
 .sleep {
-    background-color:  hsl(263, 55%, 52%);
+  grid-area: sleep;
+}
+.alone {
+  grid-area: alone;
+}
+.stand {
+  grid-area: stand;
+}
+.single {
+  grid-area: single;
+}
+.sit {
+  grid-area: sit;
+}
+
+.container {
+  display: grid;
+  margin: 40px;
+  gap: 25px 25px;
+  grid-template-areas:
+    "sleep"
+    "alone"
+    "single"
+    "sit"
+    "stand"
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    display: grid;
+    margin: 40px;
+    gap: 25px 25px;
+    grid-template-areas:
+      "sleep sleep alone stand"
+      "single sit sit stand";
+  }
+}
+
+.item {
+  border-radius: 2%;
+  padding: 25px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.prefix {
+  display: flex;
+  width: 190px;
+  justify-content: space-between;
+}
+
+.sleep {
+    
+  background-color: hsl(263, 55%, 52%);
+  background-image: url('/images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 
 .alone {
-    background-color:  hsl(217, 19%, 35%);
+  background-color: hsl(217, 19%, 35%);
 }
 
-.stand .single {
-    background-color: hsl(0, 0%, 100%);
+.stand,
+.single {
+  background-color: hsl(0, 0%, 100%);
 }
 
 .sit {
-    background-color: hsl(219, 29%, 14%);
+  background-color: hsl(219, 29%, 14%);
 }
- 
